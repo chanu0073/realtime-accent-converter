@@ -9,6 +9,9 @@ import modules
 import attentions
 import monotonic_align
 
+from native_text_encoder import NativeTextEncoder
+from speaker_encoder import SpeakerEncoder
+
 from torch.nn import Conv1d, ConvTranspose1d, AvgPool1d, Conv2d
 from torch.nn.utils import weight_norm, remove_weight_norm, spectral_norm
 from commons import init_weights, get_padding
@@ -436,7 +439,7 @@ class SynthesizerTrn(nn.Module):
 
     self.use_sdp = use_sdp
 
-    self.enc_p = TextEncoder(n_vocab,
+    self.enc_p = NativeTextEncoder(n_vocab,
         inter_channels,
         hidden_channels,
         filter_channels,
@@ -448,6 +451,8 @@ class SynthesizerTrn(nn.Module):
     self.enc_q = PosteriorEncoder(spec_channels, inter_channels, hidden_channels, 5, 1, 16, gin_channels=gin_channels)
     self.flow = ResidualCouplingBlock(inter_channels, hidden_channels, 5, 1, 4, gin_channels=gin_channels)
 
+    self.speaker_encoder = SpeakerEncoder()
+
     if use_sdp:
       self.dp = StochasticDurationPredictor(hidden_channels, 192, 3, 0.5, 4, gin_channels=gin_channels)
     else:
@@ -456,13 +461,14 @@ class SynthesizerTrn(nn.Module):
     if n_speakers > 1:
       self.emb_g = nn.Embedding(n_speakers, gin_channels)
 
-  def forward(self, x, x_lengths, y, y_lengths, sid=None):
+  def forward(self, x, x_lengths, y, y_lengths, f0, ref_mel, sid=None):
 
-    x, m_p, logs_p, x_mask = self.enc_p(x, x_lengths)
+    x, m_p, logs_p, x_mask = self.enc_p(x, x_lengths, f0)
     if self.n_speakers > 0:
-      g = self.emb_g(sid).unsqueeze(-1) # [b, h, 1]
+        g = self.emb_g(sid).unsqueeze(-1)
     else:
-      g = None
+        g = self.speaker_encoder(ref_mel)
+        g = g.unsqueeze(-1)
 
     z, m_q, logs_q, y_mask = self.enc_q(y, y_lengths, g=g)
     z_p = self.flow(z, y_mask, g=g)
@@ -496,12 +502,13 @@ class SynthesizerTrn(nn.Module):
     o = self.dec(z_slice, g=g)
     return o, l_length, attn, ids_slice, x_mask, y_mask, (z, z_p, m_p, logs_p, m_q, logs_q)
 
-  def infer(self, x, x_lengths, sid=None, noise_scale=1, length_scale=1, noise_scale_w=1., max_len=None):
-    x, m_p, logs_p, x_mask = self.enc_p(x, x_lengths)
+  def infer( self, x, x_lengths, f0, ref_mel, sid=None, noise_scale=1, length_scale=1, noise_scale_w=1., max_len=None):
+    x, m_p, logs_p, x_mask = self.enc_p(x, x_lengths, f0)
     if self.n_speakers > 0:
       g = self.emb_g(sid).unsqueeze(-1) # [b, h, 1]
     else:
-      g = None
+      g = self.speaker_encoder(ref_mel)
+      g = g.unsqueeze(-1)
 
     if self.use_sdp:
       logw = self.dp(x, x_mask, g=g, reverse=True, noise_scale=noise_scale_w)
