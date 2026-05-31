@@ -24,3 +24,13 @@ outputs/
 
 # OS
 .DS_Store
+
+# Datasets
+datasets/
+
+# Generated manifests
+data/manifests/
+
+# Models
+weights/
+models_saved/
