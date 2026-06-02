@@ -1,0 +1,11 @@
+{
+  "model": {
+    "gin_channels": 256,
+    "use_sdp": true
+  },
+
+  "data": {
+    "training_files": "...",
+    "validation_files": "..."
+  }
+}
