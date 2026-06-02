@@ -42,6 +42,8 @@ class NativeSynthesizer(nn.Module):
         upsample_kernel_sizes,
         gin_channels=256,
         use_sdp=True,
+        n_layers_q=3,
+        use_spectral_norm=False,
     ):
         super().__init__()
 
@@ -130,8 +132,13 @@ class NativeSynthesizer(nn.Module):
         self,
         text,
         text_lengths,
+
+        spec,
+        spec_lengths,
+
         mel,
         mel_lengths,
+
         f0,
     ):
 
@@ -155,8 +162,8 @@ class NativeSynthesizer(nn.Module):
         # ----------------------------------------
 
         z, m_q, logs_q, y_mask = self.enc_q(
-            mel,
-            mel_lengths,
+            spec,
+            spec_lengths,
             g=g,
         )
 
