@@ -306,3 +306,58 @@ class NativeSynthesizer(nn.Module):
                 logs_q,
             ),
         )
+    @torch.no_grad()
+    def infer(
+        self,
+        text,
+        text_lengths,
+
+        mel,
+        mel_lengths,
+
+        f0,
+
+        noise_scale=0.667,
+        max_len=None,
+    ):
+
+        fused, m_p, logs_p, x_mask = self.enc_p(
+            text,
+            text_lengths,
+            f0,
+        )
+
+        spk_emb = self.speaker_encoder(
+            mel
+        )
+
+        g = self.spk_proj(
+            spk_emb
+        )
+
+        g = g.unsqueeze(-1)
+
+        z_p = (
+            m_p +
+            torch.exp(logs_p) *
+            torch.randn_like(m_p) *
+            noise_scale
+        )
+
+        z = self.flow(
+            z_p,
+            x_mask,
+            g=g,
+            reverse=True
+        )
+
+        y_hat = self.dec(
+            z * x_mask,
+            g=g
+        )
+
+        return (
+            y_hat,
+            x_mask,
+            (z, z_p, m_p, logs_p)
+        )

@@ -91,10 +91,20 @@ def english_cleaners(text):
 
 
 def english_cleaners2(text):
-  '''Pipeline for English text, including abbreviation expansion. + punctuation + stress'''
-  text = convert_to_ascii(text)
-  text = lowercase(text)
-  text = expand_abbreviations(text)
-  phonemes = phonemize(text, language='en-us', backend='espeak', strip=True, preserve_punctuation=True, with_stress=True)
-  phonemes = collapse_whitespace(phonemes)
-  return phonemes
+    text = convert_to_ascii(text)
+    text = lowercase(text)
+
+    text = expand_abbreviations(text)
+
+    phonemes = phonemize(
+        text,
+        language='en-us',
+        backend='espeak',
+        strip=True,
+        preserve_punctuation=False,
+        with_stress=True
+    )
+
+    phonemes = collapse_whitespace(phonemes)
+
+    return phonemes
