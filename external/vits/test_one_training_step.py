@@ -11,7 +11,7 @@ from native_synthesizer import NativeSynthesizer
 from text.symbols import symbols
 
 
-CONFIG_PATH = "configs/ljs_base.json"
+CONFIG_PATH = "configs/native_vits.json"
 
 
 def main():

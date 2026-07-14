@@ -318,14 +318,24 @@ class NativeSynthesizer(nn.Module):
         f0,
 
         noise_scale=0.667,
+        length_scale=1.0,
+        noise_scale_w=0.8,
         max_len=None,
     ):
+
+        # ----------------------------------------
+        # Text encoder
+        # ----------------------------------------
 
         fused, m_p, logs_p, x_mask = self.enc_p(
             text,
             text_lengths,
             f0,
         )
+
+        # ----------------------------------------
+        # Speaker encoder
+        # ----------------------------------------
 
         spk_emb = self.speaker_encoder(
             mel
@@ -337,27 +347,110 @@ class NativeSynthesizer(nn.Module):
 
         g = g.unsqueeze(-1)
 
+        # ----------------------------------------
+        # Duration prediction
+        # ----------------------------------------
+
+        if self.use_sdp:
+
+            logw = self.dp(
+                fused,
+                x_mask,
+                g=g,
+                reverse=True,
+                noise_scale=noise_scale_w,
+            )
+
+        else:
+
+            logw = self.dp(
+                fused,
+                x_mask,
+                g=g,
+            )
+
+        w = torch.exp(logw) * x_mask * length_scale
+
+        w_ceil = torch.ceil(w)
+
+        print("Durations:")
+        print(w_ceil[0,0,:20])
+        print("Total duration:", w_ceil.sum())
+
+        y_lengths = torch.clamp_min(
+            torch.sum(w_ceil, [1, 2]),
+            1
+        ).long()
+
+        y_mask = torch.unsqueeze(
+            commons.sequence_mask(
+                y_lengths,
+                None
+            ),
+            1
+        ).to(x_mask.dtype)
+
+        attn_mask = torch.unsqueeze(
+            x_mask,
+            2
+        ) * torch.unsqueeze(
+            y_mask,
+            -1
+        )
+
+        attn = commons.generate_path(
+            w_ceil,
+            attn_mask
+        )
+
+        # ----------------------------------------
+        # Expand prior
+        # ----------------------------------------
+
+        m_p = torch.matmul(
+            attn.squeeze(1),
+            m_p.transpose(1, 2)
+        ).transpose(1, 2)
+
+        logs_p = torch.matmul(
+            attn.squeeze(1),
+            logs_p.transpose(1, 2)
+        ).transpose(1, 2)
+
+        # ----------------------------------------
+        # Sample latent
+        # ----------------------------------------
+
         z_p = (
             m_p +
-            torch.exp(logs_p) *
             torch.randn_like(m_p) *
+            torch.exp(logs_p) *
             noise_scale
         )
 
+        # ----------------------------------------
+        # Flow reverse
+        # ----------------------------------------
+
         z = self.flow(
             z_p,
-            x_mask,
+            y_mask,
             g=g,
             reverse=True
         )
 
+        # ----------------------------------------
+        # Decode audio
+        # ----------------------------------------
+
         y_hat = self.dec(
-            z * x_mask,
+            z * y_mask,
             g=g
         )
 
         return (
             y_hat,
-            x_mask,
+            attn,
+            y_mask,
             (z, z_p, m_p, logs_p)
         )

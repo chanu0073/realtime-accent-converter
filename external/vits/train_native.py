@@ -35,7 +35,7 @@ from mel_processing import mel_spectrogram_torch, spec_to_mel_torch
 from text.symbols import symbols
 
 
-torch.backends.cudnn.benchmark = True
+torch.backends.cudnn.benchmark = False
 global_step = 0
 
 
@@ -73,11 +73,11 @@ def run(rank, n_gpus, hps):
       rank=rank,
       shuffle=True)
   collate_fn = TextAudioCollate()
-  train_loader = DataLoader(train_dataset, num_workers=8, shuffle=False, pin_memory=True,
+  train_loader = DataLoader(train_dataset, num_workers=0, shuffle=False, pin_memory=True,
       collate_fn=collate_fn, batch_sampler=train_sampler)
   if rank == 0:
     eval_dataset = TextAudioLoader(hps.data.validation_files, hps.data)
-    eval_loader = DataLoader(eval_dataset, num_workers=8, shuffle=False,
+    eval_loader = DataLoader(eval_dataset, num_workers=0, shuffle=False,
         batch_size=hps.train.batch_size, pin_memory=True,
         drop_last=False, collate_fn=collate_fn)
 
@@ -94,7 +94,7 @@ def run(rank, n_gpus, hps):
       eps=hps.train.eps)
   optim_d = torch.optim.AdamW(
       net_d.parameters(),
-      hps.train.learning_rate, 
+      hps.train.learning_rate * 0.5, 
       betas=hps.train.betas, 
       eps=hps.train.eps)
   net_g = DDP(net_g, device_ids=[rank])
@@ -123,6 +123,7 @@ def run(rank, n_gpus, hps):
 
 
 def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loaders, logger, writers):
+  best_mel_loss = 999999
   net_g, net_d = nets
   optim_g, optim_d = optims
   scheduler_g, scheduler_d = schedulers
@@ -182,23 +183,30 @@ def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loade
       with autocast(enabled=False):
         loss_disc, losses_disc_r, losses_disc_g = discriminator_loss(y_d_hat_r, y_d_hat_g)
         loss_disc_all = loss_disc
-    optim_d.zero_grad()
-    scaler.scale(loss_disc_all).backward()
-    scaler.unscale_(optim_d)
-    grad_norm_d = commons.clip_grad_value_(net_d.parameters(), None)
-    scaler.step(optim_d)
+        if torch.isnan(loss_disc_all):
+          print("NaN detected in discriminator loss")
+          return
+    # if global_step % 2 == 0:
+    #   optim_d.zero_grad()
+    #   scaler.scale(loss_disc_all).backward()
+    #   scaler.unscale_(optim_d)
+    #   grad_norm_d = commons.clip_grad_value_(net_d.parameters(), None)
+    #   scaler.step(optim_d)
 
     with autocast(enabled=hps.train.fp16_run):
       # Generator
       y_d_hat_r, y_d_hat_g, fmap_r, fmap_g = net_d(y, y_hat)
       with autocast(enabled=False):
-        loss_dur = torch.sum(l_length.float())
+        loss_dur = torch.sum(l_length.float()) * 0.1
         loss_mel = F.l1_loss(y_mel, y_hat_mel) * hps.train.c_mel
         loss_kl = kl_loss(z_p, logs_q, m_p, logs_p, z_mask) * hps.train.c_kl
 
-        loss_fm = feature_loss(fmap_r, fmap_g)
-        loss_gen, losses_gen = generator_loss(y_d_hat_g)
-        loss_gen_all = loss_gen + loss_fm + loss_mel + loss_dur + loss_kl
+        loss_wav = F.l1_loss(y_hat, y)
+
+        loss_gen_all = (loss_mel +loss_dur +loss_kl +(10 * loss_wav))
+        if torch.isnan(loss_gen_all):
+          print("NaN detected in generator loss")
+          return
     optim_g.zero_grad()
     scaler.scale(loss_gen_all).backward()
     scaler.unscale_(optim_g)
@@ -209,16 +217,15 @@ def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loade
     if rank==0:
       if global_step % hps.train.log_interval == 0:
         lr = optim_g.param_groups[0]['lr']
-        losses = [loss_disc, loss_gen, loss_fm, loss_mel, loss_dur, loss_kl]
+        losses = [loss_disc_all,loss_mel,loss_dur,loss_kl]
         logger.info('Train Epoch: {} [{:.0f}%]'.format(
           epoch,
           100. * batch_idx / len(train_loader)))
         logger.info([x.item() for x in losses] + [global_step, lr])
         
-        scalar_dict = {"loss/g/total": loss_gen_all, "loss/d/total": loss_disc_all, "learning_rate": lr, "grad_norm_d": grad_norm_d, "grad_norm_g": grad_norm_g}
-        scalar_dict.update({"loss/g/fm": loss_fm, "loss/g/mel": loss_mel, "loss/g/dur": loss_dur, "loss/g/kl": loss_kl})
+        scalar_dict = {"loss/g/total": loss_gen_all, "loss/d/total": loss_disc_all, "learning_rate": lr, "grad_norm_d": 0, "grad_norm_g": grad_norm_g}
+        scalar_dict.update({"loss/g/mel": loss_mel,"loss/g/dur": loss_dur,"loss/g/kl": loss_kl})
 
-        scalar_dict.update({"loss/g/{}".format(i): v for i, v in enumerate(losses_gen)})
         scalar_dict.update({"loss/d_r/{}".format(i): v for i, v in enumerate(losses_disc_r)})
         scalar_dict.update({"loss/d_g/{}".format(i): v for i, v in enumerate(losses_disc_g)})
         image_dict = { 
@@ -256,6 +263,32 @@ def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loade
                 f"D_{global_step}.pth"
             )
         )
+
+        with open("test_sentences.txt") as f:
+            test_text = f.readline().strip()
+
+        print("\n===================")
+        print("TEST SENTENCE")
+        print(test_text)
+        print("===================\n")
+
+        if loss_mel.item() < best_mel_loss:
+
+            best_mel_loss = loss_mel.item()
+
+            utils.save_checkpoint(
+                net_g,
+                optim_g,
+                hps.train.learning_rate,
+                epoch,
+                os.path.join(
+                    hps.model_dir,
+                    "G_best.pth"
+                )
+            )
+
+            print("Saved BEST checkpoint")
+            
     global_step += 1
   
   if rank == 0:
@@ -287,7 +320,7 @@ def evaluate(hps, generator, eval_loader, writer_eval):
         f0 = f0[:1]
         f0_lengths = f0_lengths[:1]
         break
-      y_hat, attn, mask, *_ = generator.module.infer(x, x_lengths, max_len=1000)
+      y_hat, attn, mask, *_ = generator.module.infer(x,x_lengths,mel,mel_lengths,f0,max_len=1000)
       y_hat_lengths = mask.sum([1,2]).long() * hps.data.hop_length
 
       mel = spec_to_mel_torch(

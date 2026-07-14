@@ -7,11 +7,11 @@ import pyworld as pw
 import numpy as np
 
 
-SR = 22050
+SR = 16000
 
 
 wavs = glob.glob(
-    "/path/to/augmented_dataset/batch_*/wavs/*.wav"
+    "/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_*/wavs/*.wav"
 )
 
 print("Found:", len(wavs))

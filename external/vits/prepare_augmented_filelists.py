@@ -3,7 +3,7 @@ import glob
 import random
 
 
-ROOT = "/path/to/augmented_dataset"
+ROOT = "/host/home/dc/lv01-server/accent_conversion/augmented_dataset"
 
 OUTPUT_TRAIN = "filelists/native_train.txt"
 OUTPUT_VAL = "filelists/native_val.txt"

@@ -1,0 +1,100 @@
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00012/wavs/utt_057265.wav|fˌɜːðɚmˈoːɹ hiː hæd ɐpˈæɹəntli nˌɑːt ɹᵻsˈiːvd ˌɛni lˈɛɾɚz fɹʌmðə nˈæʃənəl hɛdkwˈɔːɹɾɚz ʌv ˌɛfpˌiːsˌiːsˈiː sˈɪns mˈeɪ twˈɛntinˈaɪn nˈaɪntiːn sˈɪkstiθɹˈiː
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00007/wavs/utt_031648.wav|pɹˈɑːdʒɛkts ʃˌæl biː əvə nˈeɪtʃɚ ðˌæɾə kənsˈɪdɚɹəbəl pɹəpˈoːɹʃən ʌvðə mˈʌni spˈɛnt wɪl ɡˌoʊ ˌɪntʊ wˈeɪdʒᵻz fɔːɹ lˈeɪbɚ
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00011/wavs/utt_051137.wav|aɪ wʌz ˌæbsəlˈuːtli kənvˈɪnst ɪt wʌz nˈɪksən ænd nˈaʊ ˈæftɚɹ ˈɔːl ðiːz kwˈɛstʃənz aɪ wˈʌndɚ ɪf aɪɐm ɹˈaɪt ɪn maɪ mˈaɪnd ˈɛnd kwˈoʊt
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00001/wavs/utt_004034.wav|ðeɪ ʃˌʊd ɡˈæmbəl wɪð dˈaɪs ɔːɹ kˈɑːɹdz ænd plˈeɪ æt bˈʌmbəl pˈʌpi ɔːɹ sˌʌm ˈʌðɚ dˌɪsɹˈɛpjuːɾəbəl ɡˈeɪm ʌv tʃˈæns
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00008/wavs/utt_036458.wav|ðɛɹ ɪz ɐ hˈiːbɹuː tɹɐdˈɪʃən ðˌɐɾɪt wʌzðɪ ˈoʊldɪst ʌv ˈɔːl sˈɪɾiz bˌʌt nˈaʊ wiː nˈoʊ ðæt ɡɹˈeɪt ˈɛmpaɪɚz flˈɜːɹɪʃt ænd pˈæst ɐwˈeɪ bᵻfˌoːɹ bˈæbɪlən wʌz bˈɪlt
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00011/wavs/utt_054781.wav|ɪz mˌeɪd ˈoʊnli ˈæftɚ ðə lˈɔŋɡɪst ænd mˈoʊst sˈɪɹiəs kənsˌɪdɚɹˈeɪʃənz aɪ ɐfˈɜːm ðæt maɪ ɐlˈiːdʒəns ɪz tə ðə jˈuːniən ʌv sˈoʊviət sˈoʊʃəlˌɪst ɹᵻpˈʌblɪks
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00009/wavs/utt_040094.wav|ˈæftɚɹ ɐ wˈɛlkʌm fɹʌmðə dˈæləs ɹᵻsˈɛpʃən kəmˈɪɾi
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00006/wavs/utt_025196.wav|ʃiː wʌz ɪn ɡˈʊd hˈɛlθ ˌɔn lˈiːvɪŋ hˈoʊm ænd hæd wɪð hɜːɹ ɐ lˈɑːɹdʒ sˈʌm ʌv mˈʌni
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00006/wavs/utt_028363.wav|æt ðə mˈoʊst kɹˈaʊdᵻd pˈiəɹɪədz ɔːɹ dʒˈʌst bᵻfˌoːɹ ðə sˈɛʃənəl dʒˈeɪl dᵻlˈɪvɚɹi ænd æɾ ɪts lˈoʊɪst ɪt fˈɛl sˈʌmtaɪmz tə fˈɪfti ɔːɹ sˈɪksti
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00005/wavs/utt_021052.wav|ˈæftɚ dˈɪnɚ hiː wɛnt ˌɪntʊ hˈaɪdɪŋ fɚɹə dˈeɪ ɔːɹ tˈuː
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00009/wavs/utt_043177.wav|ˌɔn noʊvˈɛmbɚ twˈɛntiθɹˈiː nˈaɪntiːn sˈɪkstiθɹˈiː
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00013/wavs/utt_061719.wav|ðætðɪ ˌɛfbˌiːˈaɪ tˈʊk ɐn ʌndjˈuːli ɹᵻstɹˈɪktɪv vjˈuː ʌv ɪts ɹᵻspˌɑːnsəbˈɪlᵻɾiz ɪn pɹɪvˈɛntɪv ɪntˈɛlɪdʒəns wˈɜːk pɹˈaɪɚ tə ðɪ ɐsˌæsᵻnˈeɪʃən
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00006/wavs/utt_029697.wav|θɹˈiː pətˈeɪɾoʊz ʌv fˈɛɹ sˈaɪz pˈiːld ænd bˈɔɪld mˈiːli
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00012/wavs/utt_059222.wav|ɪn ɐkˈoːɹdəns wɪð dʒˈɔːɹdʒ wˈɑːʃɪŋtənz mˈæksɪm ðæt ɐmˈɛɹɪkənz hæv ɐ ɡˈʌvɚnmənt kwˈoʊt ʌv ɐkˌɑːmədˈeɪʃən æz wˈɛl æz ɐ ɡˈʌvɚnmənt ʌv lˈɔːz ˈɛnd kwˈoʊt
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00002/wavs/utt_007857.wav|nˈʌθɪŋ wʌz mˈoːɹ pɹˈɑːmɪnəntli bɹˈɔːt ˈaʊt baɪ ðɪ ɪnspˈɛktɚz ðɐn ðɪ ɪnɪfˈɪʃənsi ʌvðə ɡˈʌvɚnɚɹ æt ðæt tˈaɪm mˈɪstɚ kˈoʊp
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00002/wavs/utt_006121.wav|dʒˈeɪlz ʌvwˈɪtʃ ðɪ ˈoʊld pɹˈɪzən æt ɹˈiːdɪŋ wʌzɐ spˈɛsɪmən wɜː stˈɪl lˈɛft ɪntˈækt
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00010/wavs/utt_045802.wav|bˈeɪst ˌɔn ˈʌðɚɹ ˈɛvɪdəns tə hæv fˈaɪɚd ðə ʃˈɑːts fɹʌmðə wˈɪndoʊ
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00001/wavs/utt_002222.wav|jˈɛt ðə pˈʌblɪk əpˈɪniən ʌvðə hˈoʊl bˈɑːdi sˈiːmz tə hæv tʃˈɛkt dˌɪsɪpˈeɪʃən
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00012/wavs/utt_058709.wav|ðə nˈɛkst dˈeɪ ðæt pˈeɪpɚɹ ɐnˈaʊnst ðə fˈaɪnəl ɐpɹˈuːvəl ʌvðə tɹˈeɪd mˈɑːɹt æz ðə lˈʌntʃən sˈaɪt ænd stˈeɪɾᵻd ðætðə mˈoʊɾɚkˌeɪd kwˈoʊt
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00013/wavs/utt_060319.wav|hˌuː ˈɪntɚvjˌuːd ˈɑːswəld ˈæftɚ hɪz ɹᵻtˈɜːn fɹʌmðə sˈoʊviət jˈuːniən ænd pɹˈaɪɚ tə noʊvˈɛmbɚ twˈɛntitˈuː nˈaɪntiːn sˈɪkstiθɹˈiː
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00013/wavs/utt_062014.wav|ðɛɹwˌɜː nˌɑːt ɪnˈʌf mˈɛn ɐvˈeɪləbəl tə pɚmˈɪt tˈuː ˈeɪdʒənts təbi ɐsˈaɪnd tʊ ˈɔːl ðɪ ɐdvˈæns wˈɜːk
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00008/wavs/utt_037426.wav|sˈaɪɹəs wɪððə fˈɜːst ɐpɹˈoʊtʃ ʌvðɪ ɛnsˈuːɪŋ spɹˈɪŋ mˈɑːɹtʃt fˈɔːɹwɚd ɐɡˈɛnst bˈæbɪlən
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00001/wavs/utt_002654.wav|fɹˈɛndz ɚɹˈaɪvd ɐbˌaʊt nˈaɪn ɐ ˈɛm ænd wɛnt ˈaʊt æt nˈaɪn pˈiː ˈɛm wɛn æz mˈɛni æz tˈuː hˈʌndɹɪd vˈɪzɪɾɚz hɐvbɪn əbzˈɜːvd lˈiːvɪŋ ðə dˈɛɾɚz jˈɑːɹdz æt wˈʌn tˈaɪm
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00008/wavs/utt_038754.wav|hˌuːz sˈʌmɪt ɹˈiːtʃt ˌɪntʊ ðə skˈaɪ æz fˈɑːɹ pɚhˈæps æz ðə tˈɔːlɪst ʌvðə mˈɑːdɚn bˈɪldɪŋz
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00002/wavs/utt_006844.wav|ðə pɹˈɪzənɚz wɜː kɹˈaʊdᵻd təɡˌɛðɚɹ ɪnðə dʒˈeɪl kˈɑːntɹɛɹi tə ðə ɹᵻkwˈaɪɚmənts ʌvðə fˈoːɹ dʒˈɔːɹdʒ ðə fˈoːɹθ
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00001/wavs/utt_001721.wav|ænd dʒˈɑːn lˈæŋkæstɚ fɔːɹ wˈʌn ʃˈɪlɪŋ ˈeɪt pˈɛns wɪð kˈɔsts ʌv sˈɛvən ʃˈɪlɪŋz sˈɪks pˈɛns kwˈoʊt
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00011/wavs/utt_051638.wav|ˈæftɚɹ ˈɑːswəld pˈɜːtʃɪst ðə mˈænlɪxɚkɑːɹkˈɑːnoʊ ɹˈaɪfəl hiː tˈoʊld hɪz wˈaɪf ðæt hiː pɹˈæktɪst wɪð ɪt
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00003/wavs/utt_010837.wav|hˈaɪɚd ɐ ɹˈuːm fɚðə nˈaɪt ænd mˈɔːɹnɪŋ wˌɪtʃ hiː ænd ɐ lˈɑːɹdʒ pˈɑːɹɾi ʌv fɹˈɛndz ˈɑːkjʊpˌaɪd bᵻfˌoːɹ ænd dˈʊɹɹɪŋ ðɪ ˌɛksɪkjˈuːʃən
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00012/wavs/utt_055349.wav|ðeɪ ʃˌʊd nˌɑːt biː kənfjˈuːzd wɪð slˈoʊnəs ˌɪndᵻsˈɪʒən ɔːɹ fˈɪɹ ˈoʊnli ðɪ ˌɪntəlˈɛktʃuːəli fˈɪɹləs kʊd ˈiːvən biː ɹᵻmˈoʊtli ɐtɹˈæktᵻd tʊ ˌaʊɚ dˈɑːktɹɪn
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00012/wavs/utt_059719.wav|ðiːz ɪnstɹˈʌkʃənz tə pˌiːˌɑːɹɹˈɛs pˌɜːsənˈɛl ɐpˈɪɹ təbi ðɪ ˈoʊnli ˈɪnstəns wˌɛɹ ɐn ˈɛfɚt wʌz mˌeɪd tə ɹᵻdˈuːs ðə kɹaɪtˈiəɹɪə tə ɹˈaɪɾɪŋ
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00010/wavs/utt_045693.wav|hiː sˈɛd ðætðə mˈæn hˈɛld hɪz ɐtˈɛnʃən ʌntˈɪl ðə mˈoʊɾɚkˌeɪd kˈeɪm bɪkˈʌz ðə mˈæn kwˈoʊt
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00007/wavs/utt_031003.wav|sˌʌm pˈiːpəl tɹˈaɪ tə tˈɛl mˌiː ðæt wiː mˈʌst mˌeɪk ˌʌp ˌaʊɚ mˈaɪndz ðæt fɚðə fjˈuːtʃɚ wiːʃˌɐl pˈɜːmənəntli hæv mˈɪliənz ʌv ʌnɛmplˈɔɪd
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00004/wavs/utt_018234.wav|ðə mˈoʊmənt ɪt wʌz dɪskˈʌvɚd ðætðə dˈaɪəməndz hæd dˌɪsɐpˈɪɹd ðɪ ɐfˈɛɹ wʌz tˈeɪkən ˌʌp baɪ ðə pəlˈiːs
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00010/wavs/utt_046762.wav|wˈʌn ʌvðə pəlˈiːs ˈɑːfɪsɚz ɐsˈaɪnd tə ðə kˈɔːɹnɚɹ ʌv ˈɛlm ænd hjˈuːstən stɹˈiːts fɚðə pɹˌɛzɪdˈɛnʃəl mˈoʊɾɚkˌeɪd dˈʌbəljˌuː ˈiː bˈɑːɹnɪt
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00005/wavs/utt_022144.wav|sˈoʊn ɪn bᵻtwˌiːn ðɪ ˌʌpɚ ænd lˈoʊɚ lˈɛðɚz sˈɛvɹəl spɹˈɪŋ sˈɔːz wɜː fˈaʊnd wˌɪtʃ wʊdhɐv ˈiːzili kˈʌt θɹuː ˌɛni bˈɑːɹz
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00012/wavs/utt_058184.wav|ðə də mˈoʊɹənskˌaɪlts ˈɔːlsoʊ tˈɛstᵻfˌaɪd ðæt kwˈoʊt ɹˈaɪt ɪn fɹˈʌnt ˈɛnd kwˈoʊt ʌv ˈɑːswəld mɚɹˈiːnə ˈɑːswəld kəmplˈeɪnd ɐbˌaʊt ˈɑːswəldz ɪnˈædɪkwəsi æz ɐ hˈʌsbənd
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00010/wavs/utt_046863.wav|ðɪs wʌz nˈoʊ ˈɜːlɪɚ ðɐn twˈɛlv θˈɜːɾisˈɛvən pˈiː ˈɛm ænd mˌeɪhɐv bˌɪn lˈeɪɾɚ
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00001/wavs/utt_003850.wav|ɔːɹ ðə fˈeɪθfəl dɪstʃˈɑːɹdʒ ʌv sˌʌm pˈɛɾi ˈɑːfɪs sˈʌtʃ ɐz ɡˈeɪtsmən ɔːɹ kˈæptɪn əvə wˈɔːɹd
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00011/wavs/utt_052208.wav|ɐ dɪzˈaɪɚ tʊ ɪfˈɛkt tʃˈeɪndʒᵻz ɪnðə stɹˈʌktʃɚɹ ʌv səsˈaɪəɾi ɔːɹ sˈɪmpli tə ɡˌoʊ dˌaʊn ɪn hˈɪstɚɹi æz ɐ wˈɛl pˈʌblɪsˌaɪzd ɐsˈæsɪn
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00001/wavs/utt_001884.wav|ɐnˈʌðɚ tˈuː hˈʌndɹɪd mˈoːɹ ɔːɹ lˈɛs tˈʊk ɐdvˈæntɪdʒ ʌvðə ɹˈuːlz ænd lˈɪvd aʊtsˈaɪd wɪðˌɪn ɐ sɜːkˈʌmfɹəns ʌv tˈuː mˈaɪlz ænd ɐ hˈæf
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00009/wavs/utt_044667.wav|ðə sˈaɪəns ʌv pˈeɪpɚɹ ɐnˈæləsˌɪs ɛnˈeɪbəld hˌɪm tə dɪstˈɪŋɡwɪʃ bᵻtwˌiːn dˈɪfɹənt ɹˈoʊlz ʌv pˈeɪpɚɹ ˈiːvən ðˌoʊ ðeɪ wɜː pɹədˈuːst baɪ ðə sˈeɪm mˌænjuːfˈæktʃɚɹɚ
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00009/wavs/utt_043794.wav|ɪn ðɪs kənˈɛkʃən ðə kəmˈɪʃən kənsˈɪdɚd wˌʌn
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00010/wavs/utt_046717.wav|mˈɪsɪz ɹˈiːd bᵻlˈiːvz ðæt ʃiː ɹᵻtˈɜːnd tə hɜː dˈɛsk fɹʌmðə stɹˈiːt ɐbˌaʊt tˈuː mˈɪnɪts ˈæftɚ ðə ʃˈuːɾɪŋ
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00005/wavs/utt_024307.wav|ɪt wɪl biː ɹᵻmˈɛmbɚd ðæt æz fˈɑːɹ bˈæk æz ðə ɹˈeɪn ʌv hˈɛnɹi ðɪ ˈeɪtθ ɐ nˈuː ænd mˈoʊst kɹˈuːəl pˈɛnəlɾi wʌz dɪvˈaɪzd fɚðə pˈʌnɪʃmənt ʌvðə bˈɪʃəp ʌv ɹˈɑːtʃɛstɚz kˈʊk
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00011/wavs/utt_052874.wav|ɹᵻpˈoːɹɾᵻd ðæt lˈiː kwˈoʊt kənfˈaɪdᵻd ðætðə wˈɜːs θˈɪŋ ɐbˌaʊt jˈuːθ hˈaʊs wʌzðə fˈækt ðæt hiː hædtə biː wɪð ˈʌðɚ bˈɔɪz ˈɔːl ðə tˈaɪm
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00004/wavs/utt_016664.wav|ænd hiː wɪð hɪz fˈɑːðɚɹ ɚɹˈeɪndʒd ðˌæɾə mˈɛsɪndʒɚ ʃˌʊd kˈɔːl fɚðə stˈʌf wɪð fˈɔːɹdʒd kɹᵻdˈɛnʃəlz ænd æntˈɪsᵻpˌeɪɾɪŋ ðə ɹˈaɪtfəl ˈoʊnɚ
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00012/wavs/utt_055006.wav|hiː ɪz ɐ nˈoʊnˈɑːnsəns pˈɑːɹɾi ɹˈɛɡjʊlɚ
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00013/wavs/utt_063595.wav|kəmˈɪɾi ʌv kˈæbᵻnət ˈɑːfɪsɚz æz ˌaʊɚ ɡˈʌvɚnmənt hɐz bɪkˌʌm mˈoːɹ kˈɑːmplɛks
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00002/wavs/utt_005498.wav|ɪt wʌz fˈaʊnd ðæt ʃˈækəlz mˌaɪt biː sˈeɪfli dɪspˈɛnst wɪð ˈiːvən ɪnðə kˈeɪs ʌvðə mˈoʊst dˈɛspɚɹət kˈæɹɪktɚz
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00012/wavs/utt_055211.wav|ðɛɹ kæn biː nˈoʊ mˌiːdɪˈeɪʃən bᵻtwˌiːn ðoʊz sˈɪstəmz æz ðeɪ ɛɡzˈɪst tədˈeɪ ænd ðæt pˈɜːsən
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00007/wavs/utt_031952.wav|aɪ kæn mˈɛnʃən ˈoʊnli ɐ fjˈuː ʌv ðˌɛm tənˈaɪt bˌʌt aɪ duːnˌɑːt wˈɔnt maɪ mˈɛnʃən ʌv spəsˈɪfɪk mˈɛʒɚz
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00003/wavs/utt_012031.wav|ɔlmˈaɪɾi ɡˈɑːd fˈɑːðɚɹ ʌv ˈɔːl mˈɜːsiz wiː ðaɪn ʌnwˈɜːði sˈɜːvənts dˈuː ɡˈɪv ðiː mˈoʊst hˈʌmbəl ænd hˈɑːɹɾi θˈæŋks
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00012/wavs/utt_056949.wav|ðɪs wʊdhɐv mˌeɪd hˌɪm ɐ ɹˈiːəl sˈɛntɚɹ ʌv ɐtˈɛnʃən æz hiː mˈʌstɐv bˌɪn wɛn hiː fˈɜːst ɚɹˈaɪvd ɪnðə sˈoʊviət jˈuːniən
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00001/wavs/utt_001350.wav|ðoʊz ɔnðə fˈɜːst flˈoːɹ wɜː ɹˈæðɚ lˈɑːɹdʒɚɹ ˌɔn ɐkˈaʊnt əvə sˈɛtˈɔf ɪnðə wˈɔːl ænd ðɪ ˈʌpɚmˌoʊst wɜː ðə lˈɑːɹdʒɪst fɚðə sˈeɪm ɹˈiːzən
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00006/wavs/utt_025022.wav|ænd hˈuːm hiː lˈɛft wɪðˌaʊt skɹˈuːpəl tə dʒˈɔɪn mˈɪs bˈæŋks
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00004/wavs/utt_016047.wav|ɪt tˈɜːnd ˈaʊt ðæt hiː wʌz ɹˈiəli mˈæɹid tə mˈɪsɪz kˈænɪŋ
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00002/wavs/utt_007182.wav|wˈʌn wʌz mˈɪstɚ wˈɪljəm kɹˈɔːfɚd ðɪ ˈʌðɚ ðə ɹˈɛv wˈɪtwɜːθ ɹˈʌsəl
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00008/wavs/utt_035346.wav|ɪnðə plˈænt ˈɔːlsoʊ ˈɑːksɪdʒən ɪz ɐbsˈoːɹbd θɹuː ðɪ ˌɛpɪdˈɜːmɪs ænd stˈoʊməɾə fɹʌmðɪ ˈɛɹ
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00006/wavs/utt_029677.wav|bɹˈɛd ɹˈeɪzd wɪð wʌt ɪz nˈoʊn tə bˈeɪkɚz æz ɐ spˈʌndʒ ɹᵻkwˈaɪɚz mˈoːɹ tˈaɪm ænd ɐ tɹˈaɪfəl mˈoːɹ wˈɜːk ðɐn ðə sˈɪmplɚ fˈɔːɹm fɔːɹ wˌɪtʃ aɪ hæv dʒˈʌst ɔːlɹˌɛdi ɡˈɪvən dᵻɹˈɛkʃənz
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00013/wavs/utt_062975.wav|ðə wˈɔːɹən kəmˈɪʃən ɹᵻpˈoːɹt baɪ ðə pɹˈɛzɪdənts kəmˈɪʃən ɔnðɪ ɐsˌæsᵻnˈeɪʃən ʌv pɹˈɛzɪdənt kˈɛnədi
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00009/wavs/utt_042456.wav|sˈɪks ðə lˈaɪz tˈoʊld tə ðə pəlˈiːs baɪ ˈɑːswəld sˈɛvən
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00001/wavs/utt_001424.wav|tə wˌɪtʃ ˈæksɛs wʌz ɡɹˈæntᵻd ɹˈɛɹli ænd æz ɐ ɡɹˈeɪt fˈeɪvɚ bˌʌt ðeɪ wɜːɹ ɐlˈaʊd ðə lˈʌkʃɚɹi ʌv dɹˈɪŋk ɪf ðeɪ kʊd pˈeɪ fɔːɹ ɪt
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00009/wavs/utt_041723.wav|tɹˈiːtmənt ʌv ɡˈʌvɚnɚ kˈɑːnæli
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00006/wavs/utt_026777.wav|hiː ɪnstɹˈʌktᵻd sˈɜːʔn̩ səlˈɪsɪɾɚz tə pɹɪpˈɛɹ ɐ dˈiːd ʌv ɡˈɪft æz fɹʌm hɪz fˈɑːðɚ kənvˈeɪɪŋ tə hˌɪm ᵻstˈeɪts nˌɪɹ kˈɪŋstən
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00006/wavs/utt_029483.wav|wˌɛɹ ðə lˈoʊkəl ɐθˈɔːɹɪɾi hæd nᵻɡlˈɛktᵻd tə kəmplˈaɪ wɪððə pɹəvˈɪʒənz ʌvðɪ ˈeɪtiːn sˈɪkstifˈaɪv ˈækt fɔːɹ fˈoːɹ kənsˈɛkjuːtˌɪv jˈɪɹz
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00013/wavs/utt_063113.wav|ðə kəmˈɪʃən dˈʌz bᵻlˈiːv ðæt ðɛɹˌɑːɹ ˈæspɛkts ʌvðə pɹətˈɛktɪv mˈɛʒɚz ɛmplˈɔɪd ɪnðə mˈoʊɾɚkˌeɪd æt dˈæləs wˌɪtʃ dɪzˈɜːv spˈɛʃəl kˈɑːmɛnt
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00010/wavs/utt_046728.wav|ðə ɹˌiːkənstɹˈʌkʃən wʌzðə mˈɪnɪməm tˈaɪm ɐkˈoːɹdɪŋli ʃiː pɹˈɑːbəbli mˈɛt ˈɑːswəld æɾ ɐbˌaʊt twˈɛlv θˈɜːɾitˈuː
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00005/wavs/utt_020088.wav|ðɪs hiː dˈɪd tʊ ɐn ɪnˈoːɹməs ɛkstˈɛnt
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00010/wavs/utt_046503.wav|θɹˈiː ɛmplˈɔɪiːz dʒˈeɪmz dʒˈɑːɹmən dʒˌeɪˈɑːɹ
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00004/wavs/utt_017608.wav|bˌʌt ɐnˈʌðɚ ʃˈɪp kəŋklˈuːdɪŋ ðæt hiː wʌz ˈæktɪŋ ɪn ˈɪɡnɚɹəns ɹˈɛndɚd hˌɪm ɐsˈɪstəns
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00002/wavs/utt_008693.wav|ðæt wˈɪmɪn ʃˌʊd biː fɹˈiːkwəntli kˈɛpt fɹʌm tʃˈæpəl ɪn ˈɔːɹdɚ ðæt ðeɪ mˌaɪt ɐtˈɛnd ðə lˈeɪdiz lˈɛktʃɚz ænd ɛɡzɔːɹtˈeɪʃənz
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00001/wavs/utt_000502.wav|ɪɾ ɪz dɪskˈɜːɹɪdʒɪŋ tə nˈoʊt ðætðɪ ɪmpɹˈuːvmənt ʌvðə lˈæst fˈɪfti jˈɪɹz ɪz ˈɔːlmoʊst hˈoʊli kənfˈaɪnd tə ɡɹˈeɪt bɹˈɪtən
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00004/wavs/utt_018621.wav|ɪnðə pˈɑːkɪt ʌvðə kˈoʊt mˈɪstɚ kˈoʊp ðə ɡˈʌvɚnɚ fˈaʊnd ɐ nˈiːtlifˈoʊldᵻd klˈɔθ ænd ˈæskt wˈʌt ɪt wʌz fɔːɹ
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00012/wavs/utt_056197.wav|ˈɑːswəld tˈoʊld hɪz wˈaɪf ænd mˈɪsɪz pˈeɪn ðæt hiː wʌz wˈɜːkɪŋ æz ɐ kəmˈɜːʃəl fətˈɑːɡɹəfɚ
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00008/wavs/utt_038876.wav|ɪɾ ɪz nˌɑːt stɹˈeɪndʒ ðˈɛn ðæt ðeɪ wɜːɹ ɪŋklˈuːdᵻd ɐmˌʌŋ ðə sˈɛvən wˈʌndɚz ʌvðə wˈɜːld
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00013/wavs/utt_064825.wav|kˈaʊnti ænd stˈeɪt lˈɔː ɛnfˈoːɹsmənt ˈeɪdʒənsiz ɪn ðɛɹ dˈɪstɹɪkts
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00004/wavs/utt_018142.wav|ˌɔn ɐ sˈɜːtʃ ʌvðə pɹˈɪzənɚz lˈɑːdʒɪŋz ɪn ˈælɪŋtən stɹˈiːt ɐ sˈɪlvɚ fˈɔːɹk wʌz fˈaʊnd
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00012/wavs/utt_056113.wav|ɪn fˈɛbɹuːˌɛɹi ɔːɹ mˈɑːɹtʃ ʌv nˈaɪntiːn sˈɪkstiθɹˈiː
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00010/wavs/utt_047572.wav|ʌnlˈoʊdᵻd æt twˈɛlv fˈɪftiːn pˈiː ˈɛm
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00006/wavs/utt_028378.wav|ðɪ ˈoʊld wˈɔːɹdz dˈeɪ ɹˈuːmz ænd slˈiːpɪŋ ɹˈuːmz kəmbˈaɪnd ʌvwˈɪtʃ ðə ɹˈiːdɚ hɐz ɔːlɹˌɛdi hˈɜːd sˈoʊ mˌʌtʃ
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00006/wavs/utt_026940.wav|hiː kənfˈɛst hɪmsˈɛlf ɐ pˈɜːdʒjʊɹɹɚɹ ɪn hˌævɪŋ swˈoːɹn tə ðə fˈɔls wɪl ænd ɐ hˈoʊlseɪl fˈɔːɹdʒɚ hˌævɪŋ mˌænjuːfˈæktʃɚd nˈoʊ lˈɛs ðɐn tˈɛn fˈɔls sˈɪɡnɪtʃɚz
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00005/wavs/utt_021741.wav|wɪð ˈɑːstɛnd tˈɪkɪts pɹˈiːviəsli pɹəkjˈʊɹd ɹᵻtˈɜːnd tə lˈʌndən wɪðˌaʊt mˈɪshæp ænd baɪ dᵻɡɹˈiːz dɪspˈoʊzd ʌv mˈʌtʃ ʌvðə stˈoʊlən ɡˈoʊld
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00007/wavs/utt_030654.wav|sˈuːɾᵻd tə ðə nˈiːdz ʌvðə nˈɛkst fˈeɪz wˌɪtʃ ɪz ɪn tˈɜːn ɐ pˈiəɹɪəd ʌv pɹˌɛpɚɹˈeɪʃən fɔːɹ lˌɛdʒɪslˈeɪʃən wˌɪtʃ wɪl dɪtˈɜːmɪn ɪts pˈɜːmənənt fˈɔːɹm
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00010/wavs/utt_045390.wav|wˌɛn ɚɹˈɛstᵻd hiː ɡˈeɪv hɪz wˈeɪt æz wˈʌn hˈʌndɹɪd fˈɔːɹɾi pˈaʊndz ˌɔn ˈʌðɚɹ əkˈeɪʒənz hiː ɡˈeɪv wˈeɪts ʌv bˈoʊθ wˈʌn hˈʌndɹɪd fˈɔːɹɾi ænd wˈʌn hˈʌndɹɪd fˈɪfti pˈaʊndz
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00013/wavs/utt_061461.wav|hˈɑːsti pˈɑːɹkt hɪz kˈɑːɹ ɪnðə bˈeɪsmənt ʌv pəlˈiːs hɛdkwˈɔːɹɾɚz ænd ðɛɹ mˈɛt ɐn ɐkwˈeɪntəns ˌɛltˈiː dʒˈæk ɹᵻvˈɪl ʌvðə dˈæləs pəlˈiːs fˈoːɹs
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00011/wavs/utt_053259.wav|ænd æz wɪl biː ʃˈoʊn bᵻlˌoʊ ðɪs fˈeɪlɪɹ tʊ ɐdˈæpt tə hɪz ɛnvˈaɪɹənmənt wʌzɐ dˈɑːmɪnənt tɹˈeɪt ɪn hɪz lˈeɪɾɚ lˈaɪf
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00003/wavs/utt_014915.wav|wˈʌn wʌz ðæt ʌv kˈæptɪn mɑːntɡˈɑːmɚɹi hˌuː ɐsˈuːmd ðɪ ˈeɪliəsᵻz ʌv kˈɜːnəl wˈɑːlɪs ænd kˈɜːnəl mˈɔːɹɡən
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00001/wavs/utt_001460.wav|ɪnwˌɪtʃ lˈæɾɚli ɐ kˈɑːpɚ hɐdbɪn fˈɪkst fɚðə kˈʊkɪŋ ʌv pɹəvˈɪʒənz sˈɛnt ɪn baɪ tʃˈæɹɪɾəbəl pˈɜːsənz
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00011/wavs/utt_052312.wav|hiː sˈiːmd tə pɹɪfˈɜː ðə sˈoʊviət jˈuːniən ænd hiː spˈoʊk hˈaɪli ʌv kjˈuːbə
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00013/wavs/utt_063333.wav|ðɛɹ ˈækʃənz dˈɛmənstɹˌeɪt ðætðə pɹˈɛzɪdənt ænd ðə nˈeɪʃən kæn ɛkspˈɛkt kˈɜːɹɪdʒ ænd dɪvˈoʊʃən tə dˈuːɾi fɹʌmðɪ ˈeɪdʒənts ʌvðə sˈiːkɹᵻt sˈɜːvɪs
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00013/wavs/utt_062038.wav|ænd wɪððə kəŋkˈɜːɹəns ʌvðə dˈæləs pəlˈiːs wʌz ɛntˈaɪɚli ɐpɹˈoʊpɹɪət ɪn vjˈuː ʌvðə nˈoʊn dɪzˈaɪɚz ʌvðə pɹˈɛzɪdənt
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00013/wavs/utt_063231.wav|ðə sˈiːkɹᵻt sˈɜːvɪs hɐz kənsˈɪstəntli fˈɑːloʊd tˈuː dʒˈɛnɚɹəl pɹˈɪnsɪpəlz ɪn ɪmˈɜːdʒənsiz ɪnvˈɑːlvɪŋ ðə pɹˈɛzɪdənt
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00004/wavs/utt_017393.wav|ænd ðə mˈoʊst pɹˈɑːbəbəl ˈɪnfɚɹəns ɪz ðæt hiː ɪnvˈeɪɡəld mˈɪsɪz bɹˈaʊn tə hɪz lˈɑːdʒɪŋz wɪððə sˈɛt pˈɜːpəs ʌv tˈeɪkɪŋ hɜː lˈaɪf
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00012/wavs/utt_057311.wav|ænd ðˌɐɾɪt wʊd biː bˈɛɾɚ tə hæv lˈɛs ænd nˌɑːthævtə biː kənsˈɜːnd ɐbˌaʊt təmˈɑːɹoʊ
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00004/wavs/utt_016769.wav|mˈoʊsᵻz ɪt mˈeɪ biː ˈædᵻd wʌzɐ dᵻɹˈɛkt dᵻsˈɛndənt ʌv ˈaɪki sˈɑːlɑːmənz
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00003/wavs/utt_013375.wav|ðə dˈeɪ ɐpˈɔɪntᵻd fɚðə mˈɜːdɚ ænd ɹˈaɪzɪŋ ˈæktʃuːəli ɚɹˈaɪvd bᵻfˌoːɹ ðɪ ɐθˈɔːɹɪɾiz ˌɪntəfˈɪɹd
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00003/wavs/utt_011342.wav|dˈʊɹɹɪŋ wˌɪtʃ ðeɪ kˈaʊntᵻd ðə mˈoʊmənts ðə pɹˈɪzənɚz ɪn ðɛɹ sˈɛlz æz jˈuːʒuːəl ænd ðɛɹ fɹˈɛndz ɪnðə stɹˈiːt ɪn fɹˈʌnt ʌv nˈuːɡeɪt wˌɛɹ ðeɪ pˈæst ðə nˈaɪt
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00005/wavs/utt_024529.wav|kˈʌvɚd ɹˈæðɚ skˈæntili wɪð lˈaɪt sˈændi hˈɛɹ
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00001/wavs/utt_001906.wav|hˌuːz nˈɛt ˈænjuːəl ˈɪŋkʌm ðˈʌs ɛntˈaɪɚli dᵻɹˈaɪvd fɹʌmðɪ ˌɪmpɪkjˈuːniəs ɐmˈaʊntᵻd tə bᵻtwˌiːn θɹˈiː ænd fˈoːɹ θˈaʊzənd pˈaʊndz
+/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00002/wavs/utt_005186.wav|ðə smˈɛl æt wˈʌn əklˈɑːk ʌvðə dˈeɪ wʌz sˈʌmθɪŋ mˈoːɹ ðɐn kæn biː ɛkspɹˈɛst baɪ ðə tˈɜːm dɪsɡˈʌstɪŋ
