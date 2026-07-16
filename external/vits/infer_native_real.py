@@ -9,12 +9,13 @@ from text.symbols import symbols
 
 from native_synthesizer import NativeSynthesizer
 from utils import get_hparams_from_file, load_checkpoint
+from mel_processing import spectrogram_torch, spec_to_mel_torch
 from phonemizer.backend import EspeakBackend
 
 
 CONFIG_PATH = "configs/native_vits.json"
 
-CHECKPOINT_PATH = "logs/figure1_nogan/G_3000.pth"
+CHECKPOINT_PATH = "logs/figure1_fixed_v3/G_21000.pth"
 
 REFERENCE_WAV = "/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00001/wavs/utt_000001.wav"
 
@@ -116,22 +117,24 @@ wav_torch = torch.FloatTensor(
 ).unsqueeze(0)
 
 
-print("Creating mel...")
+print("Creating mel (matching training pipeline)...")
 
-mel_transform = torchaudio.transforms.MelSpectrogram(
-    sample_rate=hps.data.sampling_rate,
-    n_fft=hps.data.filter_length,
-    hop_length=hps.data.hop_length,
-    win_length=hps.data.win_length,
-    n_mels=hps.data.n_mel_channels,
+spec = spectrogram_torch(
+    wav_torch,
+    hps.data.filter_length,
+    hps.data.sampling_rate,
+    hps.data.hop_length,
+    hps.data.win_length,
+    center=False
 )
 
-mel = mel_transform(
-    wav_torch
-)
-
-mel = torch.log(
-    torch.clamp(mel, min=1e-5)
+mel = spec_to_mel_torch(
+    spec,
+    hps.data.filter_length,
+    hps.data.n_mel_channels,
+    hps.data.sampling_rate,
+    0,
+    None
 )
 
 mel = mel.to(device)
@@ -159,6 +162,10 @@ f0 = torch.FloatTensor(
     f0
 ).unsqueeze(0).unsqueeze(0).to(device)
 
+f0_lengths = torch.LongTensor(
+    [f0.size(2)]
+).to(device)
+
 
 print("Running inference...")
 
@@ -172,10 +179,28 @@ with torch.no_grad():
         mel_lengths,
 
         f0,
+        f0_lengths,
 
         noise_scale_w=1.0,
-        length_scale=3.0
+        length_scale=1.0
     )
+
+    z, z_p, m_p, logs_p = latent
+
+    print("z stats:", z.min().item(), z.max().item(), z.mean().item(), z.std().item())
+    print("z_p stats:", z_p.min().item(), z_p.max().item(), z_p.mean().item(), z_p.std().item())
+    print("m_p stats:", m_p.min().item(), m_p.max().item(), m_p.mean().item(), m_p.std().item())
+    print("logs_p stats:", logs_p.min().item(), logs_p.max().item(), logs_p.mean().item(), logs_p.std().item())
+    print("y_mask sum:", y_mask.sum().item())
+
+    y_hat_sum = y_hat.sum().item()
+    y_hat_abs_mean = y_hat.abs().mean().item()
+    print(f"y_hat sum={y_hat_sum:.6f}, abs_mean={y_hat_abs_mean:.8f}")
+
+    # Also run decoder in isolation to test
+    z_test = z[:, :, :52] * y_mask
+    dec_out = model.dec(z_test)
+    print(f"dec_out on z: min={dec_out.min().item():.6f}, max={dec_out.max().item():.6f}, mean={dec_out.abs().mean().item():.6f}")
 
 audio = y_hat[0][0].cpu()
 

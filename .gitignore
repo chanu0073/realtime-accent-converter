@@ -45,3 +45,5 @@ models_saved/
 build/
 core.c
 core.cpython-312-x86_64-linux-gnu.so
+
+docs/

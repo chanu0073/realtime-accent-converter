@@ -140,6 +140,7 @@ class NativeSynthesizer(nn.Module):
         mel_lengths,
 
         f0,
+        f0_lengths=None,
     ):
 
         # ----------------------------------------
@@ -150,9 +151,10 @@ class NativeSynthesizer(nn.Module):
             text,
             text_lengths,
             f0,
+            f0_lengths,
         )
 
-        spk_emb = self.speaker_encoder(mel)
+        spk_emb = self.speaker_encoder(mel, mel_lengths)
 
         g = self.spk_proj(spk_emb)
         g = g.unsqueeze(-1)
@@ -316,6 +318,7 @@ class NativeSynthesizer(nn.Module):
         mel_lengths,
 
         f0,
+        f0_lengths=None,
 
         noise_scale=0.667,
         length_scale=1.0,
@@ -331,6 +334,7 @@ class NativeSynthesizer(nn.Module):
             text,
             text_lengths,
             f0,
+            f0_lengths,
         )
 
         # ----------------------------------------
@@ -338,7 +342,8 @@ class NativeSynthesizer(nn.Module):
         # ----------------------------------------
 
         spk_emb = self.speaker_encoder(
-            mel
+            mel,
+            mel_lengths
         )
 
         g = self.spk_proj(

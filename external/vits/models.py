@@ -254,9 +254,9 @@ class Generator(torch.nn.Module):
 
         self.ups = nn.ModuleList()
         for i, (u, k) in enumerate(zip(upsample_rates, upsample_kernel_sizes)):
-            self.ups.append(weight_norm(
+            self.ups.append(
                 ConvTranspose1d(upsample_initial_channel//(2**i), upsample_initial_channel//(2**(i+1)),
-                                k, u, padding=(k-u)//2)))
+                                k, u, padding=(k-u)//2))
 
         self.resblocks = nn.ModuleList()
         for i in range(len(self.ups)):
@@ -266,6 +266,9 @@ class Generator(torch.nn.Module):
 
         self.conv_post = Conv1d(ch, 1, 7, 1, padding=3, bias=False)
         self.ups.apply(init_weights)
+        self.resblocks.apply(lambda m: init_weights(m, std=0.1))
+        self.conv_pre.weight.data.normal_(0, 0.1)
+        self.conv_pre.bias.data.zero_()
 
         if gin_channels != 0:
             self.cond = nn.Conv1d(gin_channels, upsample_initial_channel, 1)
@@ -292,11 +295,7 @@ class Generator(torch.nn.Module):
         return x
 
     def remove_weight_norm(self):
-        print('Removing weight norm...')
-        for l in self.ups:
-            remove_weight_norm(l)
-        for l in self.resblocks:
-            l.remove_weight_norm()
+        pass
 
 
 class DiscriminatorP(torch.nn.Module):

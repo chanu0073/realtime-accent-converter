@@ -10,6 +10,9 @@ class SpeakerEncoder(nn.Module):
         [B, 80, T]
         (mel spectrogram)
 
+        [B]
+        (mel_lengths — number of valid frames per sample)
+
     Output:
         [B, 256]
     """
@@ -28,13 +31,22 @@ class SpeakerEncoder(nn.Module):
             nn.ReLU()
         )
 
-        self.pool = nn.AdaptiveAvgPool1d(1)
-
         self.proj = nn.Linear(256, embedding_dim)
 
-    def forward(self, mel):
+    def forward(self, mel, mel_lengths=None):
         x = self.conv(mel)
-        x = self.pool(x).squeeze(-1)
+
+        if mel_lengths is not None:
+            B, C, T = x.shape
+            mask = torch.arange(T, device=x.device).unsqueeze(0) < mel_lengths.unsqueeze(1)
+            mask = mask.unsqueeze(1).float()
+            x = x * mask
+            denom = mel_lengths.float().unsqueeze(1).unsqueeze(2).clamp(min=1)
+            x = x.sum(dim=2, keepdim=True) / denom
+        else:
+            x = x.mean(dim=2, keepdim=True)
+
+        x = x.squeeze(-1)
         x = self.proj(x)
 
         return x

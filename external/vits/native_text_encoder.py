@@ -106,7 +106,8 @@ class NativeTextEncoder(nn.Module):
         self,
         text,
         text_lengths,
-        f0
+        f0,
+        f0_lengths=None
     ):
         """
         text:
@@ -159,7 +160,8 @@ class NativeTextEncoder(nn.Module):
         # ==================================================
 
         f0_features = self.f0_encoder(
-            f0
+            f0,
+            f0_lengths
         )
 
         # ==================================================

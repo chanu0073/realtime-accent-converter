@@ -13,8 +13,8 @@
     "segment_size": 8192,
     "init_lr_ratio": 1,
     "warmup_epochs": 0,
-    "c_mel": 45,
-    "c_kl": 0.01
+    "c_mel": 5,
+    "c_kl": 1.0
   },
   "data": {
     "training_files": "filelists/native_train_phonemes.txt",

@@ -1,0 +1,28 @@
+/host/home/dc/lv01-server/accent_conversion/realtime-accent-converter/venv/lib/python3.12/site-packages/librosa/core/intervals.py:8: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_filename
+/host/home/dc/lv01-server/accent_conversion/realtime-accent-converter/venv/lib/python3.12/site-packages/librosa/core/intervals.py:8: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_filename
+INFO:figure1_fixed:{'train': {'log_interval': 200, 'eval_interval': 500, 'seed': 1234, 'epochs': 20000, 'learning_rate': 0.0001, 'betas': [0.8, 0.99], 'eps': 1e-09, 'batch_size': 8, 'fp16_run': False, 'lr_decay': 0.999875, 'segment_size': 8192, 'init_lr_ratio': 1, 'warmup_epochs': 0, 'c_mel': 45, 'c_kl': 0.01}, 'data': {'training_files': 'filelists/native_train_phonemes.txt', 'validation_files': 'filelists/native_val_phonemes.txt', 'text_cleaners': [], 'max_wav_value': 32768.0, 'sampling_rate': 16000, 'filter_length': 1024, 'hop_length': 256, 'win_length': 1024, 'n_mel_channels': 80, 'mel_fmin': 0.0, 'mel_fmax': None, 'add_blank': True, 'n_speakers': 0, 'cleaned_text': True}, 'model': {'inter_channels': 192, 'hidden_channels': 192, 'filter_channels': 768, 'n_heads': 2, 'n_layers': 6, 'kernel_size': 3, 'p_dropout': 0.1, 'resblock': '1', 'resblock_kernel_sizes': [3, 7, 11], 'resblock_dilation_sizes': [[1, 3, 5], [1, 3, 5], [1, 3, 5]], 'upsample_rates': [8, 8, 2, 2], 'upsample_initial_channel': 512, 'upsample_kernel_sizes': [16, 16, 4, 4], 'n_layers_q': 3, 'use_spectral_norm': False, 'gin_channels': 256, 'use_sdp': True}, 'model_dir': './logs/figure1_fixed'}
+WARNING:figure1_fixed:/host/home/dc/lv01-server/accent_conversion/realtime-accent-converter/external/vits is not a git repository, therefore hash value comparison will be ignored.
+/host/home/dc/lv01-server/accent_conversion/realtime-accent-converter/venv/lib/python3.12/site-packages/torch/nn/utils/weight_norm.py:28: UserWarning: torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.
+  warnings.warn("torch.nn.utils.weight_norm is deprecated in favor of torch.nn.utils.parametrizations.weight_norm.")
+./logs/figure1_fixed/G_0.pth
+INFO:figure1_fixed:Loaded checkpoint './logs/figure1_fixed/G_0.pth' (iteration 1)
+/host/home/dc/lv01-server/accent_conversion/realtime-accent-converter/venv/lib/python3.12/site-packages/torch/functional.py:665: UserWarning: stft with return_complex=False is deprecated. In a future pytorch release, stft will return complex tensors for all inputs, and return_complex=False will raise an error.
+Note: you can still call torch.view_as_real on the complex output to recover the old return format. (Triggered internally at ../aten/src/ATen/native/SpectralOps.cpp:873.)
+  return _VF.stft(input, n_fft, hop_length, win_length, window,  # type: ignore[attr-defined]
+/host/home/dc/lv01-server/accent_conversion/realtime-accent-converter/venv/lib/python3.12/site-packages/torch/autograd/graph.py:744: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [1, 9, 96], strides() = [42720, 96, 1]
+bucket_view.sizes() = [1, 9, 96], strides() = [864, 96, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:325.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+INFO:figure1_fixed:Train Epoch: 1 [0%]
+INFO:figure1_fixed:[6.009134292602539, 133.08871459960938, 0.17086069285869598, 0.0531221367418766, 5.627976417541504, 0.056811075657606125, 0, 0.0001]
+INFO:figure1_fixed:Saving model and optimizer state at iteration 1 to ./logs/figure1_fixed/G_0.pth
+INFO:figure1_fixed:Saving model and optimizer state at iteration 1 to ./logs/figure1_fixed/D_0.pth
+
+===================
+TEST SENTENCE
+Hello how are you today
+===================
+
+INFO:figure1_fixed:Saving model and optimizer state at iteration 1 to ./logs/figure1_fixed/G_best.pth
