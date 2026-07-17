@@ -300,16 +300,17 @@ def train_and_evaluate(rank, epoch, hps, nets, optims, schedulers, scaler, loade
     logger.info('====> Epoch: {}'.format(epoch))
 
  
-def evaluate(hps, generator, eval_loader, writer_eval):
+def evaluate(hps, generator, eval_loader, writer_eval, rank=0):
     generator.eval()
     with torch.no_grad():
       for batch_idx, (x,x_lengths,spec,spec_lengths,mel,mel_lengths,y,y_lengths,f0,f0_lengths) in enumerate(eval_loader):
-        x, x_lengths = x.cuda(0), x_lengths.cuda(0)
-        spec, spec_lengths = spec.cuda(0), spec_lengths.cuda(0)
-        y, y_lengths = y.cuda(0), y_lengths.cuda(0)
+        x, x_lengths = x.cuda(rank), x_lengths.cuda(rank)
+        spec, spec_lengths = spec.cuda(rank), spec_lengths.cuda(rank)
+        y, y_lengths = y.cuda(rank), y_lengths.cuda(rank)
         mel = mel.cuda(rank, non_blocking=True)
         mel_lengths = mel_lengths.cuda(rank, non_blocking=True)
 
+        f0 = f0.cuda(rank, non_blocking=True)
         f0_lengths = f0_lengths.cuda(rank, non_blocking=True)
 
         # remove else
@@ -325,7 +326,7 @@ def evaluate(hps, generator, eval_loader, writer_eval):
         f0 = f0[:1]
         f0_lengths = f0_lengths[:1]
         break
-      y_hat, attn, mask, *_ = generator.module.infer(x,x_lengths,mel,mel_lengths,f0,max_len=1000)
+      y_hat, attn, mask, *_ = generator.module.infer(x,x_lengths,mel,mel_lengths,f0,f0_lengths,max_len=1000)
       y_hat_lengths = mask.sum([1,2]).long() * hps.data.hop_length
 
       mel = spec_to_mel_torch(

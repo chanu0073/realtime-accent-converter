@@ -15,9 +15,9 @@ from phonemizer.backend import EspeakBackend
 
 CONFIG_PATH = "configs/native_vits.json"
 
-CHECKPOINT_PATH = "logs/figure1_fixed_v3/G_21000.pth"
+CHECKPOINT_PATH = "logs/figure1_wavefix/G_best.pth"
 
-REFERENCE_WAV = "/host/home/dc/lv01-server/accent_conversion/augmented_dataset/batch_00001/wavs/utt_000001.wav"
+REFERENCE_WAV = "../../data/sample.wav"
 
 OUTPUT_WAV = "generated.wav"
 
@@ -198,7 +198,7 @@ with torch.no_grad():
     print(f"y_hat sum={y_hat_sum:.6f}, abs_mean={y_hat_abs_mean:.8f}")
 
     # Also run decoder in isolation to test
-    z_test = z[:, :, :52] * y_mask
+    z_test = z[:, :, :y_mask.sum().int().item()] * y_mask
     dec_out = model.dec(z_test)
     print(f"dec_out on z: min={dec_out.min().item():.6f}, max={dec_out.max().item():.6f}, mean={dec_out.abs().mean().item():.6f}")
 
